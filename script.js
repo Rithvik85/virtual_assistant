@@ -25,36 +25,36 @@ function wishme(){
   let hours = date.getHours()
   console.log(hours)
   if(hours >= 0 && hours < 12){
-    speak("Good Morning Manish")
+    speak(`Good Morning ${username}`)
   }
   else if(hours >=12 && hours < 16){
-    speak("Good Afternoon Manish")
+    speak(`Good Afternoon ${username}`)
   }
   else{
     console.log("good evening")
-    speak("Good Evening Manish")
+    speak(`Good Evening ${username}`)
   }
 }
 
 
 
-// window.addEventListener('load',function(){
-//   wishme()
+window.addEventListener('load',function(){
+  wishme()
 
-// })
+})
 
 
 // code 
 
 // Check if the user has already registered
 window.addEventListener("load", function() {
-  // let username = localStorage.getItem("username");
+  let username = localStorage.getItem("username");
 
-  // if (!username) {  
+  if (!username) {  
     modal.style.display = "block";
-  // } else {
-    // modal.style.display = "none";  
-  // }
+  } else {
+    modal.style.display = "none";  
+  }
 });
 
 // When the user clicks on <span> (x), close the modal
